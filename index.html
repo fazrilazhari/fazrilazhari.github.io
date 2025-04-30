@@ -4,56 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laporan Tugas Pembelajaran</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    .info {
+      margin-bottom: 20px;
+    }
+    .info p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+    .content {
+      line-height: 1.6;
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Menyisipkan menu navigasi -->
-  <iframe src="menu.html" style="border: none; width: 100%; height: 50px;"></iframe>
-
   <div class="container">
-    <section id="beranda">
-      <h1>Selamat Datang di Laporan Tugas</h1>
-      <p style="text-align:center;">Website ini berisi informasi tentang tugas pembelajaran mata kuliah Sistem Operasi.</p>
-    </section>
+    <h1>Laporan Tugas Pembelajaran</h1>
+    <h2>Mata Kuliah: Sistem Operasi</h2>
 
-    <section id="tentang">
-      <h2>Tentang</h2>
-      <p>Nama: Fazril Azhari</p>
-      <p>NIM: 2303010136</p>
-      <p>Kelas: Informatika F</p>
-    </section>
+    <div class="info">
+      <p><strong>Nama:</strong> Fazril Azhari</p>
+      <p><strong>NIM:</strong> 2303010136</p>
+      <p><strong>Kelas:</strong> Informatika F</p>
+    </div>
 
-    <section id="kontak">
-      <h2>Kontak</h2>
-      <p>Email: fazril.azhari@example.com</p>
-      <p>Universitas: [Nama Universitas Anda]</p>
-    </section>
+    <div class="content">
+      <p><strong>Deskripsi Tugas:</strong></p>
+      <p>
+        Tugas ini merupakan bagian dari mata kuliah Sistem Operasi yang bertujuan untuk memahami konsep dasar sistem operasi seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem.
+      </p>
 
-    <section id="tugas">
-      <h2>Tugas Sistem Operasi</h2>
+      <p><strong>Tujuan Pembelajaran:</strong></p>
+      <ul>
+        <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
+        <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
+        <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
+        <li>Menganalisis penggunaan memori dan manajemennya oleh sistem operasi.</li>
+      </ul>
 
-      <div class="content">
-        <p><strong>Deskripsi Tugas:</strong></p>
-        <p>
-          Tugas ini merupakan bagian dari mata kuliah Sistem Operasi yang bertujuan untuk memahami konsep dasar sistem operasi seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem.
-        </p>
-
-        <p><strong>Tujuan Pembelajaran:</strong></p>
-        <ul>
-          <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
-          <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
-          <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
-          <li>Menganalisis penggunaan memori dan manajemennya oleh sistem operasi.</li>
-        </ul>
-
-        <p><strong>Kesimpulan:</strong></p>
-        <p>
-          Dengan menyelesaikan tugas ini, mahasiswa diharapkan mampu memahami dan menjelaskan peran penting sistem operasi serta mengaplikasikan pengetahuan tersebut pada kasus nyata dalam dunia komputasi.
-        </p>
-      </div>
-    </section>
+      <p><strong>Kesimpulan:</strong></p>
+      <p>
+        Dengan menyelesaikan tugas ini, mahasiswa diharapkan mampu memahami dan menjelaskan peran penting sistem operasi serta mengaplikasikan pengetahuan tersebut pada kasus nyata dalam dunia komputasi.
+      </p>
+    </div>
   </div>
-
 </body>
 </html>
