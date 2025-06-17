@@ -6,15 +6,15 @@
   <title>Laporan Tugas Sistem Operasi</title>
   <style>
     :root {
-      --primary-color: #005f99;
+      --primary-color: #3e64ff;
       --secondary-color: #f0f8ff;
-      --background-color: #f9f9f9;
+      --background-color: #f2f6fc;
       --text-color: #333;
-      --highlight: #e6f2ff;
+      --highlight: #eaf0fb;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
       margin: 0;
@@ -54,21 +54,17 @@
     }
 
     .container {
-      max-width: 850px;
+      max-width: 1000px;
       background: white;
       margin: 30px auto;
       padding: 40px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     h1, h2 {
       text-align: center;
       color: var(--primary-color);
-    }
-
-    section {
-      margin-bottom: 40px;
     }
 
     p, li {
@@ -81,36 +77,39 @@
       padding-left: 20px;
     }
 
+    section {
+      margin-bottom: 50px;
+    }
+
+    .highlight-box {
+      background-color: #fef9c3;
+      border-left: 5px solid #facc15;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin: 1.5em 0;
       font-size: 15px;
     }
 
     th, td {
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       padding: 10px;
       text-align: center;
     }
 
     th {
       background-color: var(--highlight);
-      color: #003d66;
-    }
-
-    .highlight-box {
-      background-color: var(--highlight);
-      border-left: 5px solid var(--primary-color);
-      padding: 15px;
-      margin: 20px 0;
     }
 
     .footer {
       text-align: center;
+      margin-top: 3em;
       font-size: 14px;
       color: #888;
-      margin-top: 50px;
     }
   </style>
 </head>
@@ -126,9 +125,10 @@
   </nav>
 
   <div class="container">
+
     <section id="beranda">
       <h1>Pengumpulan Tugas Sistem Operasi</h1>
-      <p style="text-align:center;">Website ini berisi laporan tugas yang telah dikerjakan sebagai bagian dari mata kuliah Sistem Operasi.</p>
+      <p style="text-align:center;">Website ini memuat laporan tugas dari mata kuliah Sistem Operasi yang mencakup konsep penjadwalan proses dan penjadwalan disk.</p>
     </section>
 
     <section id="tentang">
@@ -149,24 +149,15 @@
 
       <p><strong>Deskripsi:</strong></p>
       <p>
-        Tugas ini bertujuan untuk memahami konsep dasar sistem operasi, seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem. Mahasiswa diminta melakukan perhitungan PTPD dan simulasi Round Robin berdasarkan NIM masing-masing.
+        Tugas ini mencakup dua bagian utama: pemahaman konsep penjadwalan proses menggunakan algoritma Round Robin, serta penjadwalan disk dengan berbagai algoritma. Mahasiswa diminta menganalisis efisiensi dan perbandingan antar algoritma.
       </p>
 
-      <p><strong>Tujuan Pembelajaran:</strong></p>
-      <ul>
-        <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
-        <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
-        <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
-        <li>Menganalisis penggunaan memori oleh sistem operasi.</li>
-      </ul>
-
+      <h3>📌 Simulasi Round Robin</h3>
       <div class="highlight-box">
-        <p><strong>NIM:</strong> 2303010136</p>
-        <p><strong>Dua digit terakhir:</strong> 36 → 3 + 6 = <strong>9</strong></p>
+        <p><strong>NIM:</strong> 2303010136 → 3 + 6 = 9</p>
         <p><strong>PTPD = 9</strong> | <strong>TD/SJ = 86.22</strong></p>
       </div>
 
-      <p><strong>Hasil Simulasi Round Robin:</strong></p>
       <table>
         <thead>
           <tr>
@@ -178,41 +169,54 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>2</td>
-            <td>1.14</td>
-            <td>-2.14</td>
-            <td>-3.14</td>
-            <td>-4.14</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>1.86</td>
-            <td>-0.86</td>
-            <td>-1.86</td>
-            <td>-2.86</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>2.58</td>
-            <td>0.42</td>
-            <td>-0.58</td>
-            <td>-1.58</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>3.30</td>
-            <td>1.70</td>
-            <td>0.70</td>
-            <td>-0.30</td>
-          </tr>
+          <tr><td>2</td><td>1.14</td><td>-2.14</td><td>-3.14</td><td>-4.14</td></tr>
+          <tr><td>3</td><td>1.86</td><td>-0.86</td><td>-1.86</td><td>-2.86</td></tr>
+          <tr><td>4</td><td>2.58</td><td>0.42</td><td>-0.58</td><td>-1.58</td></tr>
+          <tr><td>5</td><td>3.30</td><td>1.70</td><td>0.70</td><td>-0.30</td></tr>
         </tbody>
       </table>
 
-      <p><strong>Kesimpulan:</strong></p>
-      <p>
-        Dari tugas ini, dapat disimpulkan bahwa pemahaman terhadap mekanisme penjadwalan proses sangat penting dalam sistem operasi. Simulasi Round Robin membantu mengilustrasikan bagaimana efisiensi waktu proses dapat dipengaruhi oleh nilai quantum (Q).
-      </p>
+      <h3>📁 Penjadwalan Disk</h3>
+      <p><strong>Jumlah Track:</strong> 2000</p>
+      <p><strong>Posisi Head Awal:</strong> 1234</p>
+      <p><strong>Track Diakses:</strong></p>
+      <p>1600, 1050, 1775, 1950, <strong>130</strong>, 825, 75, 1300, 1450, 600, <strong>300</strong>, 1600, 1050, 30, 1900, <strong>2006</strong>, 700, 1300, 55, 425, <strong>136</strong>, 700, 1600, 200</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Algoritma</th>
+            <th>Total Perpindahan Track</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>FCFS</td><td>To be calculated</td></tr>
+          <tr><td>SSTF</td><td>To be calculated</td></tr>
+          <tr><td>SCAN</td><td>To be calculated</td></tr>
+          <tr><td>CSCAN</td><td>To be calculated</td></tr>
+          <tr><td>LOOK</td><td>To be calculated</td></tr>
+          <tr><td>CLOOK</td><td>To be calculated</td></tr>
+          <tr><td>PTPD</td><td>To be calculated</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Grafik Perjalanan Head:</strong></p>
+      <p>(Visual dapat digambar dengan Chart.js atau tools lain bila diperlukan)</p>
+
+      <div class="highlight-box">
+        <h3>📝 Catatan:</h3>
+        <ul>
+          <li><strong>FCFS:</strong> Melayani permintaan secara urut.</li>
+          <li><strong>SSTF:</strong> Memilih permintaan terdekat.</li>
+          <li><strong>SCAN:</strong> Seperti elevator, maju lalu mundur.</li>
+          <li><strong>CSCAN:</strong> Sama seperti SCAN, tapi lompat ke awal.</li>
+          <li><strong>LOOK:</strong> Berhenti di permintaan terakhir, tidak ke ujung.</li>
+          <li><strong>CLOOK:</strong> Lompat ke permintaan terkecil setelah selesai.</li>
+          <li><strong>PTPD:</strong> Mirip SSTF, berbasis jarak pendek.</li>
+        </ul>
+      </div>
+
+      <p><strong>Kesimpulan:</strong> Tugas ini mengajarkan pentingnya efisiensi algoritma sistem operasi dalam penjadwalan proses dan disk. Pemilihan algoritma sangat memengaruhi performa sistem.</p>
     </section>
 
     <div class="footer">
