@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laporan Tugas Sistem Operasi</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -49,25 +50,17 @@
       text-align: center;
       color: #14532d;
     }
-    .info, .content {
-      margin-bottom: 20px;
-    }
-    .info p, .content p, .content ul {
-      font-size: 16px;
-      color: #444;
-    }
     section {
       margin-bottom: 40px;
     }
-    .result-table, .ptpd-table {
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1em 0;
+      margin-top: 15px;
     }
-    .result-table th, .result-table td,
-    .ptpd-table th, .ptpd-table td {
-      border: 1px solid #ccc;
-      padding: 10px;
+    th, td {
+      border: 1px solid #888;
+      padding: 8px;
       text-align: center;
     }
     .result-table th {
@@ -84,6 +77,10 @@
       padding: 1em;
       border-left: 5px solid #facc15;
       margin: 1em 0;
+    }
+    canvas {
+      max-width: 100%;
+      margin: 20px 0;
     }
     .footer {
       text-align: center;
@@ -130,8 +127,8 @@
       <p><strong>Jumlah track:</strong> 2000</p>
       <p><strong>Posisi Head Awal:</strong> 1234</p>
       <p><strong>Track yang Diakses:</strong></p>
-      <p>1600, 1050, 1775, 1950, <strong>130</strong>, 825, 75, 1300, 1450, 600, <strong>300</strong>,
-         1600, 1050, 30, 1900, <strong>2006</strong>, 700, 1300, 55, 425, <strong>136</strong>,
+      <p>1600, 1050, 1775, 1950, 130, 825, 75, 1300, 1450, 600, 300,
+         1600, 1050, 30, 1900, 2006, 700, 1300, 55, 425, 136,
          700, 1600, 200</p>
 
       <h3>Hasil Perhitungan:</h3>
@@ -152,6 +149,8 @@
           <tr><td>PTPD</td><td>2748</td></tr>
         </tbody>
       </table>
+
+      <canvas id="chartTugas1"></canvas>
 
       <div class="note">
         <h3>Penjelasan Algoritma</h3>
@@ -183,12 +182,75 @@
         <tr class="highlight"><td colspan="5"><strong>TOTAL</strong></td><td><strong>51.51</strong></td></tr>
         <tr class="highlight"><td colspan="5"><strong>RERATA</strong></td><td><strong>7.36</strong></td></tr>
       </table>
+
+      <canvas id="chartTugas2"></canvas>
     </section>
 
     <div class="footer">
       <p>&copy; 2025 - Laporan Sistem Operasi oleh Fazril Azhari (2303010136)</p>
     </div>
   </div>
+
+  <script>
+    // Chart Tugas 1
+    const ctx1 = document.getElementById('chartTugas1').getContext('2d');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['FCFS', 'SSTF', 'SCAN', 'CSCAN', 'LOOK', 'CLOOK', 'PTPD'],
+        datasets: [{
+          label: 'Total Perpindahan Track',
+          data: [19126, 2748, 3828, 1829, 2748, 3768, 2748],
+          backgroundColor: '#4caf50'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Perbandingan Algoritma Penjadwalan Disk'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Chart Tugas 2
+    const ctx2 = document.getElementById('chartTugas2').getContext('2d');
+    new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
+        datasets: [{
+          label: 'LT (Lama Tunggu)',
+          data: [0.00, 0.29, 3.29, 2.00, 6.71, 6.71, 9.51, 22.71],
+          fill: false,
+          borderColor: '#2e7d32',
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Grafik LT per Proses'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
