@@ -5,30 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laporan Tugas Sistem Operasi</title>
   <style>
-    :root {
-      --primary-color: #2e7d32; /* hijau gelap */
-      --secondary-color: #f2f6fc;
-      --text-color: #333;
-      --highlight: #eaf0fb;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--secondary-color);
-      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
     }
-
     nav {
-      background-color: var(--primary-color);
-      padding: 15px 0;
+      background-color: #14532d; /* Hijau gelap */
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -36,86 +26,62 @@
       margin: 0;
       padding: 0;
     }
-
     nav ul li {
-      margin: 0 20px;
+      margin: 0 15px;
     }
-
     nav ul li a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
     }
-
     nav ul li a:hover {
       text-decoration: underline;
     }
-
     .container {
       max-width: 1000px;
-      background: white;
-      margin: 30px auto;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      background: #fff;
+      margin: 20px auto;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
     }
-
-    h1, h2, h3 {
+    h1, h2 {
       text-align: center;
-      color: var(--primary-color);
+      color: #14532d;
     }
-
+    .info, .content {
+      margin-bottom: 20px;
+    }
+    .info p, .content p, .content ul {
+      font-size: 16px;
+      color: #444;
+    }
     section {
       margin-bottom: 40px;
     }
-
-    p, li {
-      font-size: 16px;
-      line-height: 1.6;
-      text-align: justify;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    table {
+    .result-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-      font-size: 15px;
+      margin: 1em 0;
     }
-
-    th, td {
+    .result-table th, .result-table td {
       border: 1px solid #ccc;
       padding: 10px;
       text-align: center;
     }
-
-    th {
-      background-color: var(--highlight);
+    .result-table th {
+      background-color: #d1fae5;
     }
-
-    .highlight-box {
-      background-color: var(--highlight);
-      border-left: 5px solid var(--primary-color);
-      padding: 15px;
-      margin: 20px 0;
-    }
-
     .note {
       background-color: #fef9c3;
       padding: 1em;
       border-left: 5px solid #facc15;
       margin: 1em 0;
     }
-
     .footer {
       text-align: center;
-      font-size: 14px;
+      margin-top: 3em;
       color: #888;
-      margin-top: 50px;
     }
   </style>
 </head>
@@ -127,18 +93,17 @@
       <li><a href="#tentang">Tentang</a></li>
       <li><a href="#kontak">Kontak</a></li>
       <li><a href="#tugas">Tugas</a></li>
-      <li><a href="#disk">Penjadwalan Disk</a></li>
     </ul>
   </nav>
 
   <div class="container">
     <section id="beranda">
-      <h1>Laporan Tugas Sistem Operasi</h1>
-      <p style="text-align:center;">Website ini berisi laporan tugas yang telah dikerjakan untuk mata kuliah Sistem Operasi.</p>
+      <h1>Selamat Datang di Laporan Tugas</h1>
+      <p style="text-align:center;">Website ini berisi informasi tentang tugas pembelajaran mata kuliah Sistem Operasi.</p>
     </section>
 
     <section id="tentang">
-      <h2>Tentang Mahasiswa</h2>
+      <h2>Tentang</h2>
       <p><strong>Nama:</strong> Fazril Azhari</p>
       <p><strong>NIM:</strong> 2303010136</p>
       <p><strong>Kelas:</strong> Informatika F</p>
@@ -153,94 +118,72 @@
     <section id="tugas">
       <h2>Tugas Sistem Operasi</h2>
 
-      <p><strong>Deskripsi:</strong></p>
-      <p>
-        Tugas ini bertujuan untuk memahami konsep dasar sistem operasi, seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem. Mahasiswa diminta melakukan perhitungan PTPD dan simulasi Round Robin berdasarkan NIM masing-masing.
-      </p>
+      <div class="content">
+        <p><strong>Deskripsi Tugas:</strong></p>
+        <p>
+          Tugas ini merupakan bagian dari mata kuliah Sistem Operasi yang bertujuan untuk memahami konsep dasar sistem operasi seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem.
+        </p>
 
-      <p><strong>Tujuan Pembelajaran:</strong></p>
-      <ul>
-        <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
-        <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
-        <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
-        <li>Menganalisis penggunaan memori oleh sistem operasi.</li>
-      </ul>
+        <p><strong>Tujuan Pembelajaran:</strong></p>
+        <ul>
+          <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
+          <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
+          <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
+          <li>Menganalisis penggunaan memori dan manajemennya oleh sistem operasi.</li>
+        </ul>
 
-      <div class="highlight-box">
-        <p><strong>NIM:</strong> 2303010136</p>
-        <p><strong>Dua digit terakhir:</strong> 36 → 3 + 6 = <strong>9</strong></p>
-        <p><strong>PTPD = 9</strong> | <strong>TD/SJ = 86.22</strong></p>
+        <p><strong>Kesimpulan:</strong></p>
+        <p>
+          Dengan menyelesaikan tugas ini, mahasiswa diharapkan mampu memahami dan menjelaskan peran penting sistem operasi serta mengaplikasikan pengetahuan tersebut pada kasus nyata dalam dunia komputasi.
+        </p>
       </div>
 
-      <p><strong>Hasil Simulasi Round Robin:</strong></p>
-      <table>
-        <thead>
-          <tr>
-            <th>Q</th>
-            <th>RR Q - TD/SJ</th>
-            <th>RR Q - 3R</th>
-            <th>RR Q - 4R</th>
-            <th>RR Q - 5</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>2</td><td>1.14</td><td>-2.14</td><td>-3.14</td><td>-4.14</td></tr>
-          <tr><td>3</td><td>1.86</td><td>-0.86</td><td>-1.86</td><td>-2.86</td></tr>
-          <tr><td>4</td><td>2.58</td><td>0.42</td><td>-0.58</td><td>-1.58</td></tr>
-          <tr><td>5</td><td>3.30</td><td>1.70</td><td>0.70</td><td>-0.30</td></tr>
-        </tbody>
-      </table>
+      <!-- Penjadwalan Disk -->
+      <div class="content">
+        <h2>Studi Kasus: Penjadwalan Disk</h2>
+        <p><strong>Jumlah track:</strong> 2000</p>
+        <p><strong>Posisi Head Awal:</strong> 1234</p>
+        <p><strong>Track yang Diakses:</strong></p>
+        <p>1600, 1050, 1775, 1950, <strong>130</strong>, 825, 75, 1300, 1450, 600, <strong>300</strong>,
+           1600, 1050, 30, 1900, <strong>2006</strong>, 700, 1300, 55, 425, <strong>136</strong>,
+           700, 1600, 200</p>
 
-      <p><strong>Kesimpulan:</strong></p>
-      <p>
-        Dari tugas ini, dapat disimpulkan bahwa pemahaman terhadap mekanisme penjadwalan proses sangat penting dalam sistem operasi. Simulasi Round Robin membantu mengilustrasikan bagaimana efisiensi waktu proses dapat dipengaruhi oleh nilai quantum (Q).
-      </p>
-    </section>
+        <h3>Hasil Perhitungan:</h3>
+        <table class="result-table">
+          <thead>
+            <tr>
+              <th>Algoritma</th>
+              <th>Total Perpindahan Track</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>FCFS</td><td>19126</td></tr>
+            <tr><td>SSTF</td><td>2748</td></tr>
+            <tr><td>SCAN</td><td>3828</td></tr>
+            <tr><td>CSCAN</td><td>1829</td></tr>
+            <tr><td>LOOK</td><td>2748</td></tr>
+            <tr><td>CLOOK</td><td>3768</td></tr>
+            <tr><td>PTPD</td><td>2748</td></tr>
+          </tbody>
+        </table>
 
-    <section id="disk">
-      <h2>Laporan Penjadwalan Disk - Tugas 1</h2>
-
-      <h3>Data Input</h3>
-      <p><strong>Jumlah track:</strong> 2000</p>
-      <p><strong>Posisi Head Awal:</strong> 1234</p>
-      <p><strong>Track yang Diakses:</strong></p>
-      <p>1600, 1050, 1775, 1950, <strong>130</strong>, 825, 75, 1300, 1450, 600, <strong>300</strong>,
-        1600, 1050, 30, 1900, <strong>2006</strong>, 700, 1300, 55, 425, <strong>136</strong>,
-        700, 1600, 200</p>
-
-      <h3>Hasil Perhitungan</h3>
-      <table>
-        <thead>
-          <tr><th>Algoritma</th><th>Total Perpindahan Track</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>FCFS</td><td>19126</td></tr>
-          <tr><td>SSTF</td><td>2748</td></tr>
-          <tr><td>SCAN</td><td>3828</td></tr>
-          <tr><td>CSCAN</td><td>1829</td></tr>
-          <tr><td>LOOK</td><td>2748</td></tr>
-          <tr><td>CLOOK</td><td>3768</td></tr>
-          <tr><td>PTPD</td><td>2748</td></tr>
-        </tbody>
-      </table>
-
-      <div class="note">
-        <h3>Catatan dan Penjelasan</h3>
-        <p>Penjadwalan disk adalah strategi untuk mengatur urutan akses data di hard disk agar perpindahan head minimum.</p>
-        <ul>
-          <li><strong>FCFS</strong>: Permintaan dilayani sesuai urutan datang.</li>
-          <li><strong>SSTF</strong>: Melayani permintaan terdekat dari posisi sekarang.</li>
-          <li><strong>SCAN</strong>: Bergerak satu arah lalu balik (mirip elevator).</li>
-          <li><strong>CSCAN</strong>: Bergerak satu arah lalu kembali ke awal langsung.</li>
-          <li><strong>LOOK</strong>: Mirip SCAN, tapi hanya sampai permintaan terakhir.</li>
-          <li><strong>CLOOK</strong>: Seperti CSCAN, tapi lompat ke permintaan terkecil.</li>
-          <li><strong>PTPD</strong>: Strategi minimalisasi jarak, mirip SSTF.</li>
-        </ul>
+        <div class="note">
+          <h3>Penjelasan Algoritma</h3>
+          <ul>
+            <li><strong>FCFS:</strong> Melayani permintaan secara urut.</li>
+            <li><strong>SSTF:</strong> Memilih jarak terdekat dari posisi sekarang.</li>
+            <li><strong>SCAN:</strong> Seperti elevator, bergerak satu arah lalu balik.</li>
+            <li><strong>CSCAN:</strong> Seperti SCAN tapi kembali ke awal secara langsung.</li>
+            <li><strong>LOOK:</strong> Seperti SCAN tapi hanya sampai permintaan terakhir.</li>
+            <li><strong>CLOOK:</strong> Seperti CSCAN tapi lompat ke permintaan terkecil.</li>
+            <li><strong>PTPD:</strong> Mirip SSTF, mencari jarak paling dekat.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <div class="footer">
-      &copy; 2025 Fazril Azhari — Sistem Operasi & Penjadwalan Disk
+      <p>&copy; 2025 - Laporan Sistem Operasi oleh Fazril Azhari (2303010136)</p>
     </div>
   </div>
 
