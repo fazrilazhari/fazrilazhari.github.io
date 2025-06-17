@@ -13,7 +13,7 @@
       scroll-behavior: smooth;
     }
     nav {
-      background-color: #14532d; /* Hijau gelap */
+      background-color: #14532d;
       padding: 10px 0;
       position: sticky;
       top: 0;
@@ -59,18 +59,25 @@
     section {
       margin-bottom: 40px;
     }
-    .result-table {
+    .result-table, .ptpd-table {
       width: 100%;
       border-collapse: collapse;
       margin: 1em 0;
     }
-    .result-table th, .result-table td {
+    .result-table th, .result-table td,
+    .ptpd-table th, .ptpd-table td {
       border: 1px solid #ccc;
       padding: 10px;
       text-align: center;
     }
     .result-table th {
       background-color: #d1fae5;
+    }
+    .ptpd-table th {
+      background-color: #b6d7a8;
+    }
+    .ptpd-table .highlight {
+      background-color: #d9ead3;
     }
     .note {
       background-color: #fef9c3;
@@ -92,7 +99,8 @@
       <li><a href="#beranda">Beranda</a></li>
       <li><a href="#tentang">Tentang</a></li>
       <li><a href="#kontak">Kontak</a></li>
-      <li><a href="#tugas">Tugas</a></li>
+      <li><a href="#tugas1">Tugas 1</a></li>
+      <li><a href="#tugas2">Tugas 2</a></li>
     </ul>
   </nav>
 
@@ -115,71 +123,67 @@
       <p><strong>Universitas:</strong> Universitas Perjuangan Tasikmalaya</p>
     </section>
 
-    <section id="tugas">
-      <h2>Tugas Sistem Operasi</h2>
+    <!-- TUGAS 1 -->
+    <section id="tugas1">
+      <h2>Tugas 1: Penjadwalan Disk</h2>
+      <p><strong>Jumlah track:</strong> 2000</p>
+      <p><strong>Posisi Head Awal:</strong> 1234</p>
+      <p><strong>Track yang Diakses:</strong></p>
+      <p>1600, 1050, 1775, 1950, <strong>130</strong>, 825, 75, 1300, 1450, 600, <strong>300</strong>,
+         1600, 1050, 30, 1900, <strong>2006</strong>, 700, 1300, 55, 425, <strong>136</strong>,
+         700, 1600, 200</p>
 
-      <div class="content">
-        <p><strong>Deskripsi Tugas:</strong></p>
-        <p>
-          Tugas ini merupakan bagian dari mata kuliah Sistem Operasi yang bertujuan untuk memahami konsep dasar sistem operasi seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem.
-        </p>
+      <h3>Hasil Perhitungan:</h3>
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Algoritma</th>
+            <th>Total Perpindahan Track</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>FCFS</td><td>19126</td></tr>
+          <tr><td>SSTF</td><td>2748</td></tr>
+          <tr><td>SCAN</td><td>3828</td></tr>
+          <tr><td>CSCAN</td><td>1829</td></tr>
+          <tr><td>LOOK</td><td>2748</td></tr>
+          <tr><td>CLOOK</td><td>3768</td></tr>
+          <tr><td>PTPD</td><td>2748</td></tr>
+        </tbody>
+      </table>
 
-        <p><strong>Tujuan Pembelajaran:</strong></p>
+      <div class="note">
+        <h3>Penjelasan Algoritma</h3>
         <ul>
-          <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
-          <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
-          <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
-          <li>Menganalisis penggunaan memori dan manajemennya oleh sistem operasi.</li>
+          <li><strong>FCFS:</strong> Melayani permintaan secara urut.</li>
+          <li><strong>SSTF:</strong> Memilih jarak terdekat dari posisi sekarang.</li>
+          <li><strong>SCAN:</strong> Seperti elevator, bergerak satu arah lalu balik.</li>
+          <li><strong>CSCAN:</strong> Seperti SCAN tapi kembali ke awal secara langsung.</li>
+          <li><strong>LOOK:</strong> Seperti SCAN tapi hanya sampai permintaan terakhir.</li>
+          <li><strong>CLOOK:</strong> Seperti CSCAN tapi lompat ke permintaan terkecil.</li>
+          <li><strong>PTPD:</strong> Mirip SSTF, mencari jarak paling dekat.</li>
         </ul>
-
-        <p><strong>Kesimpulan:</strong></p>
-        <p>
-          Dengan menyelesaikan tugas ini, mahasiswa diharapkan mampu memahami dan menjelaskan peran penting sistem operasi serta mengaplikasikan pengetahuan tersebut pada kasus nyata dalam dunia komputasi.
-        </p>
       </div>
+    </section>
 
-      <!-- Penjadwalan Disk -->
-      <div class="content">
-        <h2>Studi Kasus: Penjadwalan Disk</h2>
-        <p><strong>Jumlah track:</strong> 2000</p>
-        <p><strong>Posisi Head Awal:</strong> 1234</p>
-        <p><strong>Track yang Diakses:</strong></p>
-        <p>1600, 1050, 1775, 1950, <strong>130</strong>, 825, 75, 1300, 1450, 600, <strong>300</strong>,
-           1600, 1050, 30, 1900, <strong>2006</strong>, 700, 1300, 55, 425, <strong>136</strong>,
-           700, 1600, 200</p>
-
-        <h3>Hasil Perhitungan:</h3>
-        <table class="result-table">
-          <thead>
-            <tr>
-              <th>Algoritma</th>
-              <th>Total Perpindahan Track</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>FCFS</td><td>19126</td></tr>
-            <tr><td>SSTF</td><td>2748</td></tr>
-            <tr><td>SCAN</td><td>3828</td></tr>
-            <tr><td>CSCAN</td><td>1829</td></tr>
-            <tr><td>LOOK</td><td>2748</td></tr>
-            <tr><td>CLOOK</td><td>3768</td></tr>
-            <tr><td>PTPD</td><td>2748</td></tr>
-          </tbody>
-        </table>
-
-        <div class="note">
-          <h3>Penjelasan Algoritma</h3>
-          <ul>
-            <li><strong>FCFS:</strong> Melayani permintaan secara urut.</li>
-            <li><strong>SSTF:</strong> Memilih jarak terdekat dari posisi sekarang.</li>
-            <li><strong>SCAN:</strong> Seperti elevator, bergerak satu arah lalu balik.</li>
-            <li><strong>CSCAN:</strong> Seperti SCAN tapi kembali ke awal secara langsung.</li>
-            <li><strong>LOOK:</strong> Seperti SCAN tapi hanya sampai permintaan terakhir.</li>
-            <li><strong>CLOOK:</strong> Seperti CSCAN tapi lompat ke permintaan terkecil.</li>
-            <li><strong>PTPD:</strong> Mirip SSTF, mencari jarak paling dekat.</li>
-          </ul>
-        </div>
-      </div>
+    <!-- TUGAS 2 -->
+    <section id="tugas2">
+      <h2>Tugas 2: PTPD (x1 = 9)</h2>
+      <table class="ptpd-table">
+        <tr>
+          <th>P</th><th>TB</th><th>LP</th><th>SM</th><th>SR</th><th>LT</th>
+        </tr>
+        <tr><td>A</td><td>9</td><td>0</td><td>9</td><td>0</td><td>0.00</td></tr>
+        <tr><td>B</td><td>5</td><td>4</td><td>9</td><td>0</td><td>0.29</td></tr>
+        <tr><td>C</td><td>9</td><td>4</td><td>3</td><td>3</td><td>3.29</td></tr>
+        <tr><td>D</td><td>2</td><td>2</td><td>5</td><td>2</td><td>2.00</td></tr>
+        <tr><td>E</td><td>3</td><td>4</td><td>2</td><td>1</td><td>6.71</td></tr>
+        <tr><td>F</td><td>15</td><td>1</td><td>2</td><td>6</td><td>6.71</td></tr>
+        <tr><td>G</td><td>11</td><td>3</td><td>5</td><td>3</td><td>9.51</td></tr>
+        <tr><td>H</td><td>6</td><td>5</td><td>4</td><td>2</td><td>22.71</td></tr>
+        <tr class="highlight"><td colspan="5"><strong>TOTAL</strong></td><td><strong>51.51</strong></td></tr>
+        <tr class="highlight"><td colspan="5"><strong>RERATA</strong></td><td><strong>7.36</strong></td></tr>
+      </table>
     </section>
 
     <div class="footer">
