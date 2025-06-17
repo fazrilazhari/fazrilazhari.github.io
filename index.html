@@ -3,22 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laporan Tugas Pembelajaran</title>
+  <title>Laporan Tugas Sistem Operasi</title>
   <style>
+    :root {
+      --primary-color: #005f99;
+      --secondary-color: #f0f8ff;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --highlight: #e6f2ff;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
     }
+
     nav {
-      background-color: #333;
-      padding: 10px 0;
+      background-color: var(--primary-color);
+      padding: 15px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -26,57 +37,80 @@
       margin: 0;
       padding: 0;
     }
+
     nav ul li {
-      margin: 0 15px;
+      margin: 0 20px;
     }
+
     nav ul li a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
+
     nav ul li a:hover {
       text-decoration: underline;
     }
+
     .container {
-      max-width: 800px;
-      background: #fff;
-      margin: 20px auto;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 850px;
+      background: white;
+      margin: 30px auto;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       border-radius: 10px;
     }
+
     h1, h2 {
       text-align: center;
-      color: #333;
+      color: var(--primary-color);
     }
-    .info, .content {
-      margin-bottom: 20px;
-    }
-    .info p, .content p, .content ul {
-      font-size: 16px;
-      color: #555;
-    }
+
     section {
       margin-bottom: 40px;
     }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      font-size: 15px;
     }
+
     th, td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 10px;
       text-align: center;
     }
+
     th {
-      background-color: #eee;
+      background-color: var(--highlight);
+      color: #003d66;
     }
-    .highlight {
-      background-color: #fff7cc;
-      padding: 10px;
-      border: 1px solid #e6c200;
-      margin: 15px 0;
+
+    .highlight-box {
+      background-color: var(--highlight);
+      border-left: 5px solid var(--primary-color);
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -87,104 +121,104 @@
       <li><a href="#beranda">Beranda</a></li>
       <li><a href="#tentang">Tentang</a></li>
       <li><a href="#kontak">Kontak</a></li>
-      <li><a href="#tugas">Tugas Sistem Operasi</a></li>
+      <li><a href="#tugas">Tugas</a></li>
     </ul>
   </nav>
 
   <div class="container">
     <section id="beranda">
-      <h1>Selamat Datang di Laporan Tugas</h1>
-      <p style="text-align:center;">Website ini berisi informasi tentang tugas pembelajaran mata kuliah Sistem Operasi.</p>
+      <h1>Pengumpulan Tugas Sistem Operasi</h1>
+      <p style="text-align:center;">Website ini berisi laporan tugas yang telah dikerjakan sebagai bagian dari mata kuliah Sistem Operasi.</p>
     </section>
 
     <section id="tentang">
-      <h2>Tentang</h2>
-      <p>Nama: Fazril Azhari</p>
-      <p>NIM: 2303010136</p>
-      <p>Kelas: Informatika F</p>
+      <h2>Tentang Mahasiswa</h2>
+      <p><strong>Nama:</strong> Fazril Azhari</p>
+      <p><strong>NIM:</strong> 2303010136</p>
+      <p><strong>Kelas:</strong> Informatika F</p>
     </section>
 
     <section id="kontak">
       <h2>Kontak</h2>
-      <p>Email: fazrilazhari466@gmail.com</p>
-      <p>Universitas: Universitas Perjuangan Tasikmalaya</p>
+      <p><strong>Email:</strong> fazrilazhari466@gmail.com</p>
+      <p><strong>Universitas:</strong> Universitas Perjuangan Tasikmalaya</p>
     </section>
 
     <section id="tugas">
       <h2>Tugas Sistem Operasi</h2>
 
-      <div class="content">
-        <p><strong>Deskripsi Tugas:</strong></p>
-        <p>
-          Tugas ini merupakan bagian dari mata kuliah Sistem Operasi yang bertujuan untuk memahami konsep dasar sistem operasi seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem.
-        </p>
+      <p><strong>Deskripsi:</strong></p>
+      <p>
+        Tugas ini bertujuan untuk memahami konsep dasar sistem operasi, seperti manajemen proses, manajemen memori, sistem berkas, serta keamanan sistem. Mahasiswa diminta melakukan perhitungan PTPD dan simulasi Round Robin berdasarkan NIM masing-masing.
+      </p>
 
-        <p><strong>Tujuan Pembelajaran:</strong></p>
-        <ul>
-          <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
-          <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
-          <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
-          <li>Menganalisis penggunaan memori dan manajemennya oleh sistem operasi.</li>
-        </ul>
+      <p><strong>Tujuan Pembelajaran:</strong></p>
+      <ul>
+        <li>Memahami fungsi dan peran sistem operasi dalam komputer.</li>
+        <li>Mengenal berbagai jenis sistem operasi yang umum digunakan.</li>
+        <li>Menjelaskan cara kerja proses, thread, dan penjadwalan.</li>
+        <li>Menganalisis penggunaan memori oleh sistem operasi.</li>
+      </ul>
 
-        <p><strong>Perhitungan Berdasarkan NIM:</strong></p>
-        <div class="highlight">
-          <p>NIM: <strong>2303010136</strong></p>
-          <p>Dua digit terakhir: <strong>36</strong> → 3 + 6 = <strong>9</strong></p>
-          <p>PTPD = 9, TD/SJ = <strong>86.22</strong></p>
-        </div>
-
-        <p><strong>Hasil Perhitungan RR (PTPD = 9):</strong></p>
-        <table>
-          <thead>
-            <tr>
-              <th>Q</th>
-              <th>RR Q - TD/SJ</th>
-              <th>RR Q - 3R</th>
-              <th>RR Q - 4R</th>
-              <th>RR Q - 5</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2</td>
-              <td>1.14</td>
-              <td>-2.14</td>
-              <td>-3.14</td>
-              <td>-4.14</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>1.86</td>
-              <td>-0.86</td>
-              <td>-1.86</td>
-              <td>-2.86</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>2.58</td>
-              <td>0.42</td>
-              <td>-0.58</td>
-              <td>-1.58</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>3.30</td>
-              <td>1.70</td>
-              <td>0.70</td>
-              <td>-0.30</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p><strong>Kesimpulan:</strong></p>
-        <p>
-          Dengan menyelesaikan tugas ini, mahasiswa diharapkan mampu memahami dan menjelaskan peran penting sistem operasi serta mengaplikasikan pengetahuan tersebut pada kasus nyata dalam dunia komputasi.
-        </p>
+      <div class="highlight-box">
+        <p><strong>NIM:</strong> 2303010136</p>
+        <p><strong>Dua digit terakhir:</strong> 36 → 3 + 6 = <strong>9</strong></p>
+        <p><strong>PTPD = 9</strong> | <strong>TD/SJ = 86.22</strong></p>
       </div>
+
+      <p><strong>Hasil Simulasi Round Robin:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Q</th>
+            <th>RR Q - TD/SJ</th>
+            <th>RR Q - 3R</th>
+            <th>RR Q - 4R</th>
+            <th>RR Q - 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2</td>
+            <td>1.14</td>
+            <td>-2.14</td>
+            <td>-3.14</td>
+            <td>-4.14</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>1.86</td>
+            <td>-0.86</td>
+            <td>-1.86</td>
+            <td>-2.86</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>2.58</td>
+            <td>0.42</td>
+            <td>-0.58</td>
+            <td>-1.58</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>3.30</td>
+            <td>1.70</td>
+            <td>0.70</td>
+            <td>-0.30</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Kesimpulan:</strong></p>
+      <p>
+        Dari tugas ini, dapat disimpulkan bahwa pemahaman terhadap mekanisme penjadwalan proses sangat penting dalam sistem operasi. Simulasi Round Robin membantu mengilustrasikan bagaimana efisiensi waktu proses dapat dipengaruhi oleh nilai quantum (Q).
+      </p>
     </section>
+
+    <div class="footer">
+      &copy; 2025 Fazril Azhari — Sistem Operasi
+    </div>
   </div>
 
 </body>
 </html>
-
